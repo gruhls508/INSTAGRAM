@@ -47,4 +47,12 @@ UIImagePickerControllerSourceTypePhotoLibrary
 }
 
 
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        self.displayAddedImageView.image = (UIImage *) [info valueForKey:UIImagePickerControllerOriginalImage];
+    }];
+}
+
+
 @end
