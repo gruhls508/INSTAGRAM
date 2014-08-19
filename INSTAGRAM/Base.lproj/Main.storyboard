@@ -20,11 +20,11 @@
                                 <rect key="frame" x="36" y="427" width="249" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
-                                <state key="normal" title="Login with email">
+                                <state key="normal" title="Login with Username">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6Gx-Sd-175" kind="modal" id="K68-cR-cxN"/>
+                                    <segue destination="Hvy-M8-ijh" kind="modal" id="K68-cR-cxN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-Se-4bi">
@@ -131,7 +131,7 @@
                                 <connections>
                                     <action selector="onSignUp:" destination="iUC-fa-EQR" eventType="touchUpInside" id="g0k-Ue-Wq3"/>
                                     <action selector="signup:" destination="iUC-fa-EQR" eventType="touchUpInside" id="IAa-5M-Axn"/>
-                                    <segue destination="6Gx-Sd-175" kind="modal" id="Lou-rQ-DP0"/>
+                                    <segue destination="Hvy-M8-ijh" kind="modal" id="Lou-rQ-DP0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -189,33 +189,23 @@
                                     <action selector="onLoginPressed:" destination="6Gx-Sd-175" eventType="touchUpInside" id="0F0-JP-BlK"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pGP-sZ-zzo">
-                                <rect key="frame" x="62" y="263" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="onEmailInput:" destination="6Gx-Sd-175" eventType="editingDidEndOnExit" id="Glr-pU-1z0"/>
-                                </connections>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="JCH-4a-iea"/>
                     <connections>
-                        <outlet property="emailTextField" destination="pGP-sZ-zzo" id="KdG-jI-uUD"/>
                         <outlet property="passwordTextField" destination="kF6-wP-Xqy" id="6vW-sc-RZ2"/>
                         <outlet property="usernameTextField" destination="qQb-CS-IzF" id="z46-Xg-TFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-4f-76s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128" y="118"/>
+            <point key="canvasLocation" x="1654" y="118"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="2uv-wU-4G9">
             <objects>
-                <viewController id="7D6-XV-7aG" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="searchVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7D6-XV-7aG" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TGL-eg-gka"/>
                         <viewControllerLayoutGuide type="bottom" id="THl-8k-3Rg"/>
@@ -272,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5i9-Xg-sXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1566" y="184"/>
+            <point key="canvasLocation" x="2092" y="184"/>
         </scene>
         <!--Photo Upload View Controller-->
         <scene sceneID="MTb-pr-Jng">
@@ -290,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIe-lI-td7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="193"/>
+            <point key="canvasLocation" x="2555" y="193"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qms-SK-IC0">
@@ -310,6 +300,24 @@
             </objects>
             <point key="canvasLocation" x="-396" y="110"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wOE-ft-adL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hvy-M8-ijh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K78-2z-9Ma">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Gx-Sd-175" kind="relationship" relationship="rootViewController" id="hl1-IM-80k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eW7-67-RnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1116" y="118"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -317,6 +325,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Lou-rQ-DP0"/>
+        <segue reference="K68-cR-cxN"/>
     </inferredMetricsTieBreakers>
 </document>
