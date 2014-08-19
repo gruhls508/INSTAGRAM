@@ -352,6 +352,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSearchButtonTapped:" destination="jhy-DB-U4R" eventType="touchUpInside" id="Ljr-Sf-zNH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="post count" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="52" translatesAutoresizingMaskIntoConstraints="NO" id="tpI-XN-tqH">
                                 <rect key="frame" x="136" y="42" width="52" height="44"/>
@@ -422,6 +425,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="ARa-zP-KDE"/>
+                    <connections>
+                        <outlet property="followerCountLabel" destination="an5-uy-b80" id="T7B-ae-dye"/>
+                        <outlet property="followingCountLabel" destination="vMP-7j-laB" id="0mj-K9-THh"/>
+                        <outlet property="postCountLabel" destination="tpI-XN-tqH" id="YRO-XR-JxY"/>
+                        <outlet property="profileImage" destination="kuH-eJ-ejV" id="hLq-PC-9eh"/>
+                        <outlet property="usernameLabel" destination="hb1-ou-BRg" id="OYd-HA-AYU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR4-0e-C3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
