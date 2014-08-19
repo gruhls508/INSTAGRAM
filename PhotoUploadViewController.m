@@ -41,10 +41,6 @@ UIImagePickerControllerSourceTypePhotoLibrary
     return YES;
 }
 
-
-
-//  DON'T FORGET TO CONNECT THIS BUTTON ACTION TO THE APPROPRIATE BUTTON IN STORYBOARD--ONCE YOU 'HAVE' STORYBOARD
-
 - (IBAction)onAddImage:(id)sender
 {
     [self presentViewController:self.imagePicker animated:YES completion:nil];

@@ -36,6 +36,7 @@
 		51E0FDA619A2F3A800378FC4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FDA519A2F3A800378FC4 /* Accounts.framework */; };
 		51E0FDA919A2FBB800378FC4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */; };
 		51E0FDAC19A2FCE500378FC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */; };
+		7961604219A3DA750017DD8A /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7961604119A3DA750017DD8A /* HomeFeedViewController.m */; };
 		79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6BEC919A2D66C006CAEF8 /* ImageCell.m */; };
 		79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = ../SignUpViewController.m; sourceTree = "<group>"; };
 		51E0FDAA19A2FCE500378FC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
 		51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
+		7961604019A3DA750017DD8A /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
+		7961604119A3DA750017DD8A /* HomeFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		79B6BEC819A2D66C006CAEF8 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		79B6BEC919A2D66C006CAEF8 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -175,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				51E0FD6C19A2AE3300378FC4 /* Main.storyboard */,
+				7961604019A3DA750017DD8A /* HomeFeedViewController.h */,
+				7961604119A3DA750017DD8A /* HomeFeedViewController.m */,
 				51E0FD6F19A2AE3300378FC4 /* RootViewController.h */,
 				51E0FD7019A2AE3300378FC4 /* RootViewController.m */,
 				51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */,
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E0FD7119A2AE3300378FC4 /* RootViewController.m in Sources */,
+				7961604219A3DA750017DD8A /* HomeFeedViewController.m in Sources */,
 				79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */,
 				51E0FDA919A2FBB800378FC4 /* SignUpViewController.m in Sources */,
 				79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */,
