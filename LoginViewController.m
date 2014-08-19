@@ -11,6 +11,7 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
 @end
 
@@ -19,26 +20,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.usernameTextField.placeholder = @"Email";
-    self.usernameTextField.textAlignment = NSTextAlignmentCenter;
-    
-    self.passwordTextField.placeholder = @"Password";
-    self.passwordTextField.textAlignment = NSTextAlignmentCenter;
+
 }
 
 - (IBAction)onLoginPressed:(id)sender
 {
     NSString *username = [self.usernameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *password = [self.passwordTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSString *email = [self.emailTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     if ([username length] ==0 || [password length] == 0)
     {
-        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Make sure you enter a username, password" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Make sure you enter a username, password and email" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [alertview show];
     }
     else {
+        
+        //  This will need to be changed in order to accept email as an argument in determining whether login was successful.
+        
         [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
             if (error) {
                 UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Sorry" message:[error.userInfo objectForKey:@"error"] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -50,6 +50,13 @@
         }];
     }
 
+}
+- (IBAction)onUsernameInput:(id)sender {
+}
+- (IBAction)onPasswordInput:(id)sender {
+}
+
+- (IBAction)onEmailInput:(id)sender {
 }
 
 
