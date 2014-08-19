@@ -21,6 +21,8 @@
 		51E0FD7C19A2AE3300378FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5E19A2AE3300378FC4 /* UIKit.framework */; };
 		51E0FD8419A2AE3300378FC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 51E0FD8219A2AE3300378FC4 /* InfoPlist.strings */; };
 		51E0FD8619A2AE3300378FC4 /* INSTAGRAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E0FD8519A2AE3300378FC4 /* INSTAGRAMTests.m */; };
+		79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6BEC919A2D66C006CAEF8 /* ImageCell.m */; };
+		79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		51E0FD8119A2AE3300378FC4 /* INSTAGRAMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "INSTAGRAMTests-Info.plist"; sourceTree = "<group>"; };
 		51E0FD8319A2AE3300378FC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		51E0FD8519A2AE3300378FC4 /* INSTAGRAMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = INSTAGRAMTests.m; sourceTree = "<group>"; };
+		79B6BEC819A2D66C006CAEF8 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		79B6BEC919A2D66C006CAEF8 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,10 @@
 				51E0FD6C19A2AE3300378FC4 /* Main.storyboard */,
 				51E0FD6F19A2AE3300378FC4 /* ViewController.h */,
 				51E0FD7019A2AE3300378FC4 /* ViewController.m */,
+				79B6BEC819A2D66C006CAEF8 /* ImageCell.h */,
+				79B6BEC919A2D66C006CAEF8 /* ImageCell.m */,
+				79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */,
+				79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */,
 				51E0FD7219A2AE3300378FC4 /* Images.xcassets */,
 				51E0FD6119A2AE3300378FC4 /* Supporting Files */,
 			);
@@ -250,6 +260,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E0FD7119A2AE3300378FC4 /* ViewController.m in Sources */,
+				79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */,
+				79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */,
 				51E0FD6B19A2AE3300378FC4 /* AppDelegate.m in Sources */,
 				51E0FD6719A2AE3300378FC4 /* main.m in Sources */,
 			);
@@ -456,6 +468,7 @@
 				51E0FD8B19A2AE3300378FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		51E0FD8C19A2AE3300378FC4 /* Build configuration list for PBXNativeTarget "INSTAGRAMTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +477,7 @@
 				51E0FD8E19A2AE3300378FC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
