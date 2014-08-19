@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="-126" y="802"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="YGq-o3-g6g">
             <objects>
-                <viewController id="6Gx-Sd-175" customClass="SignUpViewController" sceneMemberID="viewController">
+                <viewController id="6Gx-Sd-175" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fsg-KZ-qJn"/>
                         <viewControllerLayoutGuide type="bottom" id="IMs-1c-9Mi"/>
@@ -111,8 +111,32 @@
                     <view key="view" contentMode="scaleToFill" id="V31-2w-kWW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-CS-IzF">
+                                <rect key="frame" x="62" y="201" width="197" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onEmailEntered:" destination="6Gx-Sd-175" eventType="editingDidEndOnExit" id="jrc-wp-HZ1"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kF6-wP-Xqy">
+                                <rect key="frame" x="62" y="232" width="197" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onPasswordEntered:" destination="6Gx-Sd-175" eventType="editingDidEndOnExit" id="hTA-fo-yeF"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="qQb-CS-IzF" id="p66-0c-HrG"/>
+                        <outlet property="passwordTextField" destination="kF6-wP-Xqy" id="6vW-sc-RZ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-4f-76s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
