@@ -14,6 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *postCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followerCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followingCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *userPhotosCollectionView;
 
 @end
 
@@ -25,6 +28,8 @@
     // Do any additional setup after loading the view.
 }
 - (IBAction)onSearchButtonTapped:(id)sender {
+}
+- (IBAction)onEditButtonPressed:(id)sender {
 }
 
 @end
