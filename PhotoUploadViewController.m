@@ -12,12 +12,8 @@
 
 @property UIImagePickerController *imagePicker;
 
-
-
-//  THE FOLLOWING PROPERTY NEEDS TO BE HOOKED UP TO THE IMAGE CONTAINER THAT WILL DISPLAY IN THE VIEW
-
 @property (weak, nonatomic) IBOutlet UIImageView *displayAddedImageView;
-
+@property UITextField *captionField;
 
 @end
 
@@ -54,5 +50,41 @@ UIImagePickerControllerSourceTypePhotoLibrary
     }];
 }
 
+-(IBAction)onPostPhoto:(id)sender
+{
+    NSData *fileData = UIImagePNGRepresentation(self.displayAddedImageView.image);
+    NSString *fileName = @"image.png";
+    NSString *fileType = @"image";
+    NSString *description = self.captionField.text;
+    
+    PFFile *file = [PFFile fileWithName:fileName data:fileData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
+                                                                message:@"Please try again"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles: nil];
+            [alertView show];
+        }
+        else {
+            PFObject *post = [PFObject objectWithClassName:@"Post"];
+            [post setObject:file forKey:@"file"];
+            [post setObject:fileType forKey:@"fileType"];
+            [post setObject:description forKey:@"description"];
+            
+            [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (error) {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
+                                                                        message:@"Please try again"
+                                                                       delegate:self
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles: nil];
+                    [alertView show];
+                }
+            }];
+        }
+    }];
+}
 
 @end
