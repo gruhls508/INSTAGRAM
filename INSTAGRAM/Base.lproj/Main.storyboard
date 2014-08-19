@@ -16,25 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-Ln-4R3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmt-Ln-4R3">
                                 <rect key="frame" x="36" y="427" width="249" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="19"/>
                                 <state key="normal" title="Login with email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6Gx-Sd-175" kind="modal" id="K68-cR-cxN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-Se-4bi">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-Se-4bi">
                                 <rect key="frame" x="36" y="381" width="249" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Ora-SQ-feF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="20"/>
                                 <state key="normal" title="Login with Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKS-le-xyv">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKS-le-xyv">
                                 <rect key="frame" x="36" y="139" width="254" height="81"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,13 +48,75 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfL-Yy-M1n">
+                                <rect key="frame" x="69" y="518" width="194" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="Sign up for Instagram">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="iUC-fa-EQR" kind="modal" id="dfc-ft-20k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ay6-Se-4bi" firstAttribute="leading" secondItem="Cmt-Ln-4R3" secondAttribute="leading" id="4hp-zo-TOC"/>
+                            <constraint firstItem="qfL-Yy-M1n" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="69" id="4u8-dw-tJe"/>
+                            <constraint firstAttribute="trailing" secondItem="qfL-Yy-M1n" secondAttribute="trailing" constant="57" id="5UG-e3-cXN"/>
+                            <constraint firstItem="Ay6-Se-4bi" firstAttribute="trailing" secondItem="Cmt-Ln-4R3" secondAttribute="trailing" id="7KV-8m-idK"/>
+                            <constraint firstAttribute="bottom" secondItem="kKS-le-xyv" secondAttribute="bottom" constant="348" id="C8I-FF-Rgq"/>
+                            <constraint firstAttribute="trailing" secondItem="Ay6-Se-4bi" secondAttribute="trailing" constant="35" id="Nj3-hk-0Dk"/>
+                            <constraint firstItem="Ay6-Se-4bi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="36" id="SoJ-Qx-R02"/>
+                            <constraint firstItem="Cmt-Ln-4R3" firstAttribute="top" secondItem="Ay6-Se-4bi" secondAttribute="bottom" constant="13" id="WJr-yK-H1f"/>
+                            <constraint firstItem="Ay6-Se-4bi" firstAttribute="leading" secondItem="kKS-le-xyv" secondAttribute="leading" id="Wod-gs-uF9"/>
+                            <constraint firstAttribute="bottom" secondItem="Cmt-Ln-4R3" secondAttribute="bottom" constant="111" id="aV3-WS-acU"/>
+                            <constraint firstAttribute="bottom" secondItem="qfL-Yy-M1n" secondAttribute="bottom" constant="20" id="cvj-3V-Pq2"/>
+                            <constraint firstAttribute="bottom" secondItem="Ay6-Se-4bi" secondAttribute="bottom" constant="154" id="lGy-ZM-dsI"/>
+                            <constraint firstItem="qfL-Yy-M1n" firstAttribute="top" secondItem="Cmt-Ln-4R3" secondAttribute="bottom" constant="61" id="oVQ-ER-8b9"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="104"/>
+            <point key="canvasLocation" x="-396" y="110"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="uaz-Y8-eyS">
+            <objects>
+                <viewController id="iUC-fa-EQR" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MDk-Lm-Xc5"/>
+                        <viewControllerLayoutGuide type="bottom" id="0gi-9r-WWc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sEh-JP-GD2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gg-ks-nNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-126" y="802"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="YGq-o3-g6g">
+            <objects>
+                <viewController id="6Gx-Sd-175" customClass="SignUpViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fsg-KZ-qJn"/>
+                        <viewControllerLayoutGuide type="bottom" id="IMs-1c-9Mi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V31-2w-kWW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wED-4f-76s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-107" y="-651"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="2uv-wU-4G9">

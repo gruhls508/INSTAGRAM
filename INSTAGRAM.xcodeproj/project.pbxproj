@@ -33,6 +33,8 @@
 		51E0FDA219A2F38D00378FC4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FDA119A2F38D00378FC4 /* Social.framework */; };
 		51E0FDA419A2F39500378FC4 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FDA319A2F39400378FC4 /* AdSupport.framework */; };
 		51E0FDA619A2F3A800378FC4 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FDA519A2F3A800378FC4 /* Accounts.framework */; };
+		51E0FDA919A2FBB800378FC4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */; };
+		51E0FDAC19A2FCE500378FC4 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */; };
 		79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6BEC919A2D66C006CAEF8 /* ImageCell.m */; };
 		79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,10 @@
 		51E0FDA119A2F38D00378FC4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		51E0FDA319A2F39400378FC4 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		51E0FDA519A2F3A800378FC4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignUpViewController.h; path = ../SignUpViewController.h; sourceTree = "<group>"; };
+		51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignUpViewController.m; path = ../SignUpViewController.m; sourceTree = "<group>"; };
+		51E0FDAA19A2FCE500378FC4 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = ../LoginViewController.h; sourceTree = "<group>"; };
+		51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = ../LoginViewController.m; sourceTree = "<group>"; };
 		79B6BEC819A2D66C006CAEF8 /* ImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
 		79B6BEC919A2D66C006CAEF8 /* ImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
 		79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
@@ -165,16 +171,15 @@
 		51E0FD6019A2AE3300378FC4 /* INSTAGRAM */ = {
 			isa = PBXGroup;
 			children = (
-				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
-				51E0FD6A19A2AE3300378FC4 /* AppDelegate.m */,
 				51E0FD6C19A2AE3300378FC4 /* Main.storyboard */,
 				51E0FD6F19A2AE3300378FC4 /* RootViewController.h */,
 				51E0FD7019A2AE3300378FC4 /* RootViewController.m */,
-				79B6BEC819A2D66C006CAEF8 /* ImageCell.h */,
-				79B6BEC919A2D66C006CAEF8 /* ImageCell.m */,
+				51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */,
+				51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */,
+				51E0FDAA19A2FCE500378FC4 /* LoginViewController.h */,
+				51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */,
 				79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */,
 				79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */,
-				51E0FD7219A2AE3300378FC4 /* Images.xcassets */,
 				51E0FD6119A2AE3300378FC4 /* Supporting Files */,
 			);
 			path = INSTAGRAM;
@@ -183,6 +188,11 @@
 		51E0FD6119A2AE3300378FC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				51E0FD7219A2AE3300378FC4 /* Images.xcassets */,
+				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
+				51E0FD6A19A2AE3300378FC4 /* AppDelegate.m */,
+				79B6BEC819A2D66C006CAEF8 /* ImageCell.h */,
+				79B6BEC919A2D66C006CAEF8 /* ImageCell.m */,
 				51E0FD9519A2F2E200378FC4 /* Parse.framework */,
 				51E0FD6219A2AE3300378FC4 /* INSTAGRAM-Info.plist */,
 				51E0FD6319A2AE3300378FC4 /* InfoPlist.strings */,
@@ -309,7 +319,9 @@
 			files = (
 				51E0FD7119A2AE3300378FC4 /* RootViewController.m in Sources */,
 				79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */,
+				51E0FDA919A2FBB800378FC4 /* SignUpViewController.m in Sources */,
 				79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */,
+				51E0FDAC19A2FCE500378FC4 /* LoginViewController.m in Sources */,
 				51E0FD6B19A2AE3300378FC4 /* AppDelegate.m in Sources */,
 				51E0FD6719A2AE3300378FC4 /* main.m in Sources */,
 			);
