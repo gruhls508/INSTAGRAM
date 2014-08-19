@@ -323,7 +323,7 @@
             </objects>
             <point key="canvasLocation" x="2324" y="791"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile View Controller - Profile-->
         <scene sceneID="iMk-VB-Hgt">
             <objects>
                 <viewController id="jhy-DB-U4R" customClass="ProfileViewController" sceneMemberID="viewController">
@@ -421,6 +421,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="ARa-zP-KDE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR4-0e-C3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -440,6 +441,7 @@
                         <segue destination="nVd-Dn-guy" kind="relationship" relationship="viewControllers" id="Opg-2D-xwi"/>
                         <segue destination="7D6-XV-7aG" kind="relationship" relationship="viewControllers" id="sbd-cS-buO"/>
                         <segue destination="Qo3-dF-wFZ" kind="relationship" relationship="viewControllers" id="Qhb-jF-izu"/>
+                        <segue destination="jhy-DB-U4R" kind="relationship" relationship="viewControllers" id="3Po-4t-BlM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8e-Jc-j2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,6 +480,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvf-uH-368" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2324" y="2162"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
