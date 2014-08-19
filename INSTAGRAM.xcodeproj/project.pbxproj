@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		511FEFF519A3C8660041A6F4 /* PhotoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFF419A3C8660041A6F4 /* PhotoUploadViewController.m */; };
 		511FEFFB19A3F3C40041A6F4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFFA19A3F3C40041A6F4 /* ProfileViewController.m */; };
+		511FEFFE19A4057F0041A6F4 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */; };
 		51E0FD5B19A2AE3300378FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5A19A2AE3300378FC4 /* Foundation.framework */; };
 		51E0FD5D19A2AE3300378FC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5C19A2AE3300378FC4 /* CoreGraphics.framework */; };
 		51E0FD5F19A2AE3300378FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5E19A2AE3300378FC4 /* UIKit.framework */; };
@@ -57,6 +58,8 @@
 		511FEFF419A3C8660041A6F4 /* PhotoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoUploadViewController.m; path = ../PhotoUploadViewController.m; sourceTree = "<group>"; };
 		511FEFF919A3F3C40041A6F4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
 		511FEFFA19A3F3C40041A6F4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = ../EditProfileViewController.h; sourceTree = "<group>"; };
+		511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = ../EditProfileViewController.m; sourceTree = "<group>"; };
 		51E0FD5719A2AE3300378FC4 /* INSTAGRAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INSTAGRAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E0FD5A19A2AE3300378FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51E0FD5C19A2AE3300378FC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -201,6 +204,8 @@
 		51E0FD6119A2AE3300378FC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */,
+				511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */,
 				51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */,
 				51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */,
 				51E0FD7219A2AE3300378FC4 /* Images.xcassets */,
@@ -333,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E0FD7119A2AE3300378FC4 /* RootViewController.m in Sources */,
+				511FEFFE19A4057F0041A6F4 /* EditProfileViewController.m in Sources */,
 				7961604219A3DA750017DD8A /* HomeFeedViewController.m in Sources */,
 				79B6BECA19A2D66C006CAEF8 /* ImageCell.m in Sources */,
 				51E0FDA919A2FBB800378FC4 /* SignUpViewController.m in Sources */,
