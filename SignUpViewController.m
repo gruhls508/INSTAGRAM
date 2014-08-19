@@ -38,9 +38,10 @@
     else
     {
         PFUser *newUser = [PFUser user];
-        newUser[@"username"] = username;
-        newUser[@"password"] = password;
-        newUser[@"email"] = email;
+        newUser.username = username;
+        newUser.password = password;
+        newUser.email = email;
+        NSLog(@"%@ %@ %@", newUser.username, newUser.password, newUser.email);
         
         [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (error) {
@@ -49,6 +50,7 @@
             }
             else {
                 [self.navigationController popToRootViewControllerAnimated:YES];
+                NSLog(@"did it?");
             }
         }];
     }
@@ -56,6 +58,15 @@
 - (IBAction)onSignUp:(id)sender
 {
     
+}
+
+- (IBAction)onUsernameInput:(id)sender {
+}
+
+- (IBAction)onPasswordInput:(id)sender {
+}
+
+- (IBAction)onEmailInput:(id)sender {
 }
 
 
