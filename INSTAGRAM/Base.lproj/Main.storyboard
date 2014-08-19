@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="48x-Lz-ztg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hvy-M8-ijh" kind="modal" id="K68-cR-cxN"/>
+                                    <segue destination="6Gx-Sd-175" kind="modal" id="Msz-wl-Jnw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-Se-4bi">
@@ -131,7 +131,7 @@
                                 <connections>
                                     <action selector="onSignUp:" destination="iUC-fa-EQR" eventType="touchUpInside" id="g0k-Ue-Wq3"/>
                                     <action selector="signup:" destination="iUC-fa-EQR" eventType="touchUpInside" id="IAa-5M-Axn"/>
-                                    <segue destination="Hvy-M8-ijh" kind="modal" id="Lou-rQ-DP0"/>
+                                    <segue destination="6Gx-Sd-175" kind="modal" id="qnW-n5-fc8"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gg-ks-nNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="580" y="455"/>
+            <point key="canvasLocation" x="598" y="118"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="YGq-o3-g6g">
@@ -187,6 +187,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onLoginPressed:" destination="6Gx-Sd-175" eventType="touchUpInside" id="0F0-JP-BlK"/>
+                                    <segue destination="H7V-sw-faH" kind="modal" id="dGF-av-O3J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-4f-76s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1654" y="118"/>
+            <point key="canvasLocation" x="1044" y="110"/>
         </scene>
         <!--Home Feed View Controller - Home-->
         <scene sceneID="TA2-Qu-Cnv">
@@ -219,7 +220,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdF-P5-scF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="-582"/>
+            <point key="canvasLocation" x="2324" y="-571"/>
         </scene>
         <!--Search View Controller - Search-->
         <scene sceneID="2uv-wU-4G9">
@@ -282,7 +283,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5i9-Xg-sXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="97"/>
+            <point key="canvasLocation" x="2324" y="108"/>
         </scene>
         <!--Photo Upload View Controller - Upload-->
         <scene sceneID="MTb-pr-Jng">
@@ -296,7 +297,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-yY-6lk">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqb-yY-6lk">
                                 <rect key="frame" x="114" y="242" width="92" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add Image">
@@ -306,7 +307,7 @@
                                     <action selector="onAddImage:" destination="Qo3-dF-wFZ" eventType="touchUpInside" id="1Ib-T1-Bfs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-Sw-0Os">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-Sw-0Os">
                                 <rect key="frame" x="48" y="79" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -320,43 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIe-lI-td7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2656" y="780"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Qms-SK-IC0">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="48x-Lz-ztg" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9eu-Je-uPI">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="AbI-6R-qjk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eOS-Do-4We" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-396" y="110"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="wOE-ft-adL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hvy-M8-ijh" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K78-2z-9Ma">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6Gx-Sd-175" kind="relationship" relationship="rootViewController" id="hl1-IM-80k"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eW7-67-RnW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1116" y="118"/>
+            <point key="canvasLocation" x="2324" y="791"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DcO-r6-QbM">
@@ -376,7 +341,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f8e-Jc-j2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="110"/>
+            <point key="canvasLocation" x="1539" y="97"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -385,6 +350,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="K68-cR-cxN"/>
+        <segue reference="Msz-wl-Jnw"/>
     </inferredMetricsTieBreakers>
 </document>
