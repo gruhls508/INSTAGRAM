@@ -23,8 +23,10 @@
 {
     [super viewDidLoad];
     
-    self.imagePicker = [UIImagePickerController new];
+    PFUser *currentUser = [PFUser currentUser];
+    NSLog(@"Current user: %@", currentUser.username);
     
+    self.imagePicker = [UIImagePickerController new];
     
     self.imagePicker.delegate = self;
     self.imagePicker.navigationController.delegate = self;

@@ -22,6 +22,10 @@
 {
     [super viewDidLoad];
     
+    
+    PFUser *currentUser = [PFUser currentUser];
+    NSLog(@"Current user: %@", currentUser.username);
+    
     self.flowLayout = (UICollectionViewFlowLayout *)[self.collectionView collectionViewLayout];
     self.flowLayout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView.backgroundColor = [UIColor clearColor];
@@ -34,7 +38,27 @@
     
     [self.flowLayout setItemSize:CGSizeMake(105, 105)];
     [self.flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
     [self.collectionView reloadData];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query whereKey:@"recipientIds" equalTo:[[PFUser currentUser] objectId]];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        else {
+            self.images = objects;
+            [self.collectionView reloadData];
+            NSLog(@"Retrieved %d images", [self.images count]);
+        }
+    }];
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
