@@ -30,14 +30,26 @@
     
     self.imagePicker.delegate = self;
     self.imagePicker.navigationController.delegate = self;
+
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+
+    }
+
+    else {
+        self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    self.imagePicker.mediaTypes = [UIImagePickerController availableMediaTypesForSourceType:self.imagePicker.sourceType];
+
+    [self presentViewController:self.imagePicker animated:NO completion:nil];
 }
 
 
-+(BOOL)isSourceTypeAvailable:(UIImagePickerControllerSourceType)
-UIImagePickerControllerSourceTypePhotoLibrary
-{
-    return YES;
-}
+//+(BOOL)isSourceTypeAvailable:(UIImagePickerControllerSourceType)
+//UIImagePickerControllerSourceTypePhotoLibrary
+//{
+//    return YES;
+//}
 
 - (IBAction)onAddImage:(id)sender
 {
