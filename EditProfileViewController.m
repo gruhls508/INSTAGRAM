@@ -8,9 +8,8 @@
 
 #import "EditProfileViewController.h"
 
-@interface EditProfileViewController ()
+@interface EditProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *publicInfoTableView;
-@property (weak, nonatomic) IBOutlet UITableView *privateInfoTableView;
 
 @end
 
@@ -21,15 +20,37 @@
     [super viewDidLoad];
 }
 
--(BOOL)prefersStatusBarHidden{
-    return YES;
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    //  Want to test a method that will display the different req'd text labels in cells via a conditional that uses their indexes to determine which cell gets what. Going to try it with just the cell at index 0 and go from there.
+    return 1;
 }
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCellID"];
+    
+    if (indexPath == 0) {
+        cell.textLabel.text = @"some text";
+    }
+    
+    [self.publicInfoTableView reloadData];
+    return cell;
+}
+
+
+
+
 
 - (IBAction)onCancelButtonPressed:(id)sender {
 }
 - (IBAction)onDoneButtonPressed:(id)sender {
 }
 - (IBAction)onPrivacySwitchFlipped:(id)sender {
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 @end
