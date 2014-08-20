@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5116F0E019A55087005CB3C1 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5116F0DF19A55087005CB3C1 /* FacebookSDK.framework */; };
 		511FEFF519A3C8660041A6F4 /* PhotoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFF419A3C8660041A6F4 /* PhotoUploadViewController.m */; };
 		511FEFFB19A3F3C40041A6F4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFFA19A3F3C40041A6F4 /* ProfileViewController.m */; };
 		511FEFFE19A4057F0041A6F4 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5116F0DF19A55087005CB3C1 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		511FEFF319A3C8660041A6F4 /* PhotoUploadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoUploadViewController.h; path = ../PhotoUploadViewController.h; sourceTree = "<group>"; };
 		511FEFF419A3C8660041A6F4 /* PhotoUploadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoUploadViewController.m; path = ../PhotoUploadViewController.m; sourceTree = "<group>"; };
 		511FEFF919A3F3C40041A6F4 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				51E0FD9219A2F2A400378FC4 /* CFNetwork.framework in Frameworks */,
 				51E0FD9619A2F2E200378FC4 /* Parse.framework in Frameworks */,
 				51E0FD9019A2F29B00378FC4 /* AudioToolbox.framework in Frameworks */,
+				5116F0E019A55087005CB3C1 /* FacebookSDK.framework in Frameworks */,
 				51E0FD5F19A2AE3300378FC4 /* UIKit.framework in Frameworks */,
 				51E0FD5B19A2AE3300378FC4 /* Foundation.framework in Frameworks */,
 			);
@@ -164,6 +167,7 @@
 		51E0FD5919A2AE3300378FC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5116F0DF19A55087005CB3C1 /* FacebookSDK.framework */,
 				51E0FDA519A2F3A800378FC4 /* Accounts.framework */,
 				51E0FDA319A2F39400378FC4 /* AdSupport.framework */,
 				51E0FDA119A2F38D00378FC4 /* Social.framework */,
@@ -308,6 +312,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 51E0FD4E19A2AE3300378FC4;
 			productRefGroup = 51E0FD5819A2AE3300378FC4 /* Products */;
@@ -485,6 +490,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/INSTAGRAM",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK/FBAudienceNetwork",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "INSTAGRAM/INSTAGRAM-Prefix.pch";
@@ -504,6 +512,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/INSTAGRAM",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK/FBAudienceNetwork",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "INSTAGRAM/INSTAGRAM-Prefix.pch";
