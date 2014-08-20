@@ -238,6 +238,9 @@
                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="DCY-Cu-lH7"/>
+                    <connections>
+                        <outlet property="tableView" destination="I6M-9k-pR9" id="lEm-Dc-jKI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdF-P5-scF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
