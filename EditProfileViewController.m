@@ -10,6 +10,8 @@
 
 @interface EditProfileViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *publicInfoTableView;
+@property PFUser *currentUser;
+@property NSMutableArray *userData;
 
 @end
 
@@ -18,27 +20,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.currentUser = [PFUser currentUser];
+    NSLog(@"%@", self.currentUser);
+    self.userData = [NSMutableArray arrayWithObjects:@"name", self.currentUser.username, @"website", @"bio", nil];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    //  Want to test a method that will display the different req'd text labels in cells via a conditional that uses their indexes to determine which cell gets what. Going to try it with just the cell at index 0 and go from there.
-    return 1;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCellID"];
     
-    if (indexPath == 0) {
-        cell.textLabel.text = @"some text";
-    }
+    cell.textLabel.text = [self.userData objectAtIndex:indexPath.row];
     
-    [self.publicInfoTableView reloadData];
+    
     return cell;
 }
-
-
 
 
 
