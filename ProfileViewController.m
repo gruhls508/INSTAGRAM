@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *userPhotosCollectionView;
+@property PFUser *currentUser;
 
 @end
 
@@ -25,8 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.currentUser = [PFUser currentUser];
+
 }
-- (IBAction)onSearchButtonTapped:(id)sender {
+- (IBAction)onSearchButtonTapped:(id)sender
+{
+    
 }
 
 
