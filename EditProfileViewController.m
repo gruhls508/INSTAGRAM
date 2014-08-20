@@ -10,6 +10,9 @@
 
 @interface EditProfileViewController ()
 @property PFUser *currentUser;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *websiteField;
+
 
 @end
 
@@ -30,6 +33,11 @@
 - (IBAction)onPrivacySwitchFlipped:(id)sender
 {
     
+}
+- (IBAction)onSaveButtonPressed:(id)sender
+{
+    [self.currentUser addObject:self.nameField.text forKey:@"name"];
+    [self.currentUser addObject:self.websiteField.text forKey:@"website"];
 }
 
 -(BOOL)prefersStatusBarHidden
