@@ -40,10 +40,6 @@
     return cell;
 }
 
-
-
-- (IBAction)onCancelButtonPressed:(id)sender {
-}
 - (IBAction)onDoneButtonPressed:(id)sender {
 }
 - (IBAction)onPrivacySwitchFlipped:(id)sender {
