@@ -18,6 +18,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    PFUser *currentUser = [PFUser currentUser];
+    NSLog(@"%@", currentUser);
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -30,13 +32,11 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCellID"];
     
-        cell.textLabel.text = @"some text";
-        NSLog(@"hey I exist");
+    
+//    cell.textLabel.text = [self.placeHolderArray objectAtIndex:indexPath.row];
     
     return cell;
 }
-
-
 
 
 

@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
 @property (weak, nonatomic) IBOutlet UICollectionView *userPhotosCollectionView;
 
+
 @end
 
 @implementation ProfileViewController
@@ -25,7 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    PFUser *currentUser = [PFUser currentUser];
+    NSLog(@"%@", currentUser);
 }
 - (IBAction)onSearchButtonTapped:(id)sender {
 }
