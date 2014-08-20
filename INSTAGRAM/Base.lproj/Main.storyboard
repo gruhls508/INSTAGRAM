@@ -311,11 +311,31 @@
                                 <rect key="frame" x="60" y="41" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzr-1B-fZV">
+                                <rect key="frame" x="122" y="305" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPostPhoto:" destination="Qo3-dF-wFZ" eventType="touchUpInside" id="vd7-am-ygr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-Wm-ur6">
+                                <rect key="frame" x="118" y="334" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onCommentPressed:" destination="Qo3-dF-wFZ" eventType="editingDidEndOnExit" id="T5N-Lm-WhF"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" id="cbZ-nw-mZ4"/>
                     <connections>
+                        <outlet property="captionField" destination="zF4-Wm-ur6" id="s2R-AT-TIc"/>
                         <outlet property="displayAddedImageView" destination="d1a-Sw-0Os" id="d1i-cf-sOg"/>
                     </connections>
                 </viewController>

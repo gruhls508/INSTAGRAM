@@ -13,7 +13,7 @@
 @property UIImagePickerController *imagePicker;
 
 @property (weak, nonatomic) IBOutlet UIImageView *displayAddedImageView;
-@property UITextField *captionField;
+@property (weak, nonatomic) IBOutlet UITextField *captionField;
 
 @end
 
@@ -85,6 +85,10 @@ UIImagePickerControllerSourceTypePhotoLibrary
             }];
         }
     }];
+}
+- (IBAction)onCommentPressed:(id)sender
+{
+    
 }
 
 @end
