@@ -88,6 +88,12 @@
     
     return cell;
 }
+- (IBAction)onLikePressed:(id)sender
+{
+}
+- (IBAction)onCommentPressed:(id)sender
+{
+}
 
 @end
 

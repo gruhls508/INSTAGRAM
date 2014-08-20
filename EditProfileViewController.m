@@ -8,10 +8,8 @@
 
 #import "EditProfileViewController.h"
 
-@interface EditProfileViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UITableView *publicInfoTableView;
+@interface EditProfileViewController ()
 @property PFUser *currentUser;
-@property NSMutableArray *userData;
 
 @end
 
@@ -22,32 +20,21 @@
     [super viewDidLoad];
     self.currentUser = [PFUser currentUser];
     NSLog(@"%@", self.currentUser);
-    self.userData = [NSMutableArray arrayWithObjects:@"name", self.currentUser.username, @"website", @"bio", nil];
+
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (IBAction)onDoneButtonPressed:(id)sender
 {
-    return 4;
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+}
+- (IBAction)onPrivacySwitchFlipped:(id)sender
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCellID"];
     
-    cell.textLabel.text = [self.userData objectAtIndex:indexPath.row];
-    
-    
-    return cell;
 }
 
-- (IBAction)onDoneButtonPressed:(id)sender {
-//    UITableViewCell *usernameCell = [self.publicInfoTableView cellForRowAtIndexPath:1];
-////    NSLog(@"%@", usernameCell);
-}
-- (IBAction)onPrivacySwitchFlipped:(id)sender {
-}
-
--(BOOL)prefersStatusBarHidden{
+-(BOOL)prefersStatusBarHidden
+{
     return YES;
 }
 
