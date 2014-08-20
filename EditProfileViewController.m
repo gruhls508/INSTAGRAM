@@ -17,7 +17,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
+}
+
+
+
+- (IBAction)onCancelButtonPressed:(id)sender {
+}
+- (IBAction)onDoneButtonPressed:(id)sender {
 }
 
 @end
