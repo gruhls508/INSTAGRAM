@@ -491,8 +491,16 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Edit Profile" id="oJC-Sn-Bok">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="c2p-t4-BEN"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="qck-G5-ueb"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="c2p-t4-BEN">
+                                            <connections>
+                                                <action selector="onCancelButtonPressed:" destination="oz2-Qg-o1t" id="Icj-1p-7A3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="qck-G5-ueb">
+                                            <connections>
+                                                <action selector="onDoneButtonPressed:" destination="oz2-Qg-o1t" id="EsM-Z8-zVI"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -511,10 +519,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Chq-JM-t8I">
                                 <rect key="frame" x="271" y="512" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="onPrivacySwitchFlipped:" destination="oz2-Qg-o1t" eventType="valueChanged" id="27n-SR-x6j"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="privateInfoTableView" destination="f3f-py-R4H" id="XDr-YS-7Bz"/>
+                        <outlet property="publicInfoTableView" destination="bo0-4c-rvo" id="LOF-ej-qfw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIg-kX-ZSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

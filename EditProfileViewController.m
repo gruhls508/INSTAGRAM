@@ -9,6 +9,8 @@
 #import "EditProfileViewController.h"
 
 @interface EditProfileViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *publicInfoTableView;
+@property (weak, nonatomic) IBOutlet UITableView *privateInfoTableView;
 
 @end
 
@@ -23,11 +25,11 @@
     return YES;
 }
 
-
-
 - (IBAction)onCancelButtonPressed:(id)sender {
 }
 - (IBAction)onDoneButtonPressed:(id)sender {
+}
+- (IBAction)onPrivacySwitchFlipped:(id)sender {
 }
 
 @end
