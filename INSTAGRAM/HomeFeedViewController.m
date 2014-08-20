@@ -8,7 +8,8 @@
 
 #import "HomeFeedViewController.h"
 
-@interface HomeFeedViewController ()
+@interface HomeFeedViewController () <UITableViewDataSource, UITableViewDelegate>
+@property NSArray *posts;
 
 @end
 
@@ -17,6 +18,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.posts.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell"];
+    return cell;
 }
 
 @end

@@ -60,13 +60,16 @@
     
 }
 
-- (IBAction)onUsernameInput:(id)sender {
+- (IBAction)onUsernameInput:(id)sender
+{
 }
 
-- (IBAction)onPasswordInput:(id)sender {
+- (IBAction)onPasswordInput:(id)sender
+{
 }
 
-- (IBAction)onEmailInput:(id)sender {
+- (IBAction)onEmailInput:(id)sender
+{
 }
 
 

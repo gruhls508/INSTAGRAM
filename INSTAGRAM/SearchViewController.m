@@ -13,6 +13,7 @@
 @property UICollectionViewFlowLayout *flowLayout;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property NSArray *images;
+
 @end
 
 @implementation SearchViewController
