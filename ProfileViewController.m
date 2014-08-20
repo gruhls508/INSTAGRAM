@@ -27,6 +27,9 @@
 {
     [super viewDidLoad];
     self.currentUser = [PFUser currentUser];
+    
+    self.usernameLabel.text = self.currentUser.username;
+
 
 }
 - (IBAction)onSearchButtonTapped:(id)sender
