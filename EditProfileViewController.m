@@ -41,8 +41,8 @@
 }
 
 - (IBAction)onDoneButtonPressed:(id)sender {
-//    UITableViewCell *usernameCell = [self.publicInfoTableView cellForRowAtIndexPath:[1]];
-//    NSLog(@"%@", usernameCell);
+//    UITableViewCell *usernameCell = [self.publicInfoTableView cellForRowAtIndexPath:1];
+////    NSLog(@"%@", usernameCell);
 }
 - (IBAction)onPrivacySwitchFlipped:(id)sender {
 }
