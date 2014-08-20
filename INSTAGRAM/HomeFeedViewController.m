@@ -23,7 +23,7 @@
     [super viewDidLoad];
     PFUser *currentUser = [PFUser currentUser];
     NSLog(@"Current user: %@", currentUser.username);
-
+    
     
 }
 
@@ -71,22 +71,23 @@
             PFObject *post = [self.posts objectAtIndex:indexPath.row];
             
             NSString *caption = [post objectForKey:@"caption"];
-            UILabel *cellLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+            UILabel *cellLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 320, 320, 20)];
             [cell addSubview:cellLabel];
             cellLabel.text = caption.description;
+            
+            PFFile *imageFile = [post objectForKey:@"file"];
+            NSURL *imageFileUrl = [[NSURL alloc] initWithString:imageFile.url];
+            NSData *imageData = [NSData dataWithContentsOfURL:imageFileUrl];
+            
+            UIImageView *cellImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
+            cellImageView.contentMode = UIViewContentModeScaleAspectFit;
+            [cell addSubview:cellImageView];
+            cellImageView.image = [UIImage imageWithData:imageData];
         }
     }];
     
     return cell;
-    
-    //    PFFile *imageFile = [self.post objectForKey:@"file"];
-    //    NSURL *imageFileUrl = [[NSURL alloc] initWithString:imageFile.url];
-    //    NSData *imageData = [NSData dataWithContentsOfURL:imageFileUrl];
-    //
-    //    UIImageView *cellImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
-    //    cellImageView.image = [UIImage imageWithData:imageData];
-    
-    
 }
 
 @end
+
