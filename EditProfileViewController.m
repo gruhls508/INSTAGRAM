@@ -29,7 +29,6 @@
 - (IBAction)onDoneButtonPressed:(id)sender
 {
 
-
 }
 - (IBAction)onPrivacySwitchFlipped:(id)sender
 {
@@ -37,8 +36,19 @@
 }
 - (IBAction)onSaveButtonPressed:(id)sender
 {
-    [self.currentUser addObject:self.nameField.text forKey:@"name"];
-    [self.currentUser addObject:self.websiteField.text forKey:@"website"];
+    NSString *name = self.nameField.text;
+    NSString *website = self.websiteField.text;
+
+    PFObject *userInfo = [PFObject objectWithClassName:@"User"];
+    [userInfo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            NSLog(@"%@", [error userInfo]);
+        } else {
+            [userInfo setObject:name forKey:@"name"];
+            [userInfo setObject:website forKey:@"website"];
+
+        }
+    }];
 }
 
 -(BOOL)prefersStatusBarHidden
