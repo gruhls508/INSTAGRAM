@@ -55,7 +55,7 @@ UIImagePickerControllerSourceTypePhotoLibrary
     NSData *fileData = UIImagePNGRepresentation(self.displayAddedImageView.image);
     NSString *fileName = @"image.png";
     NSString *fileType = @"image";
-    NSString *description = self.captionField.text;
+    NSString *caption = self.captionField.text;
     
     PFFile *file = [PFFile fileWithName:fileName data:fileData];
     [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -71,7 +71,7 @@ UIImagePickerControllerSourceTypePhotoLibrary
             PFObject *post = [PFObject objectWithClassName:@"Post"];
             [post setObject:file forKey:@"file"];
             [post setObject:fileType forKey:@"fileType"];
-            [post setObject:description forKey:@"description"];
+            [post setObject:caption forKey:@"caption"];
             
             [post saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                 if (error) {
