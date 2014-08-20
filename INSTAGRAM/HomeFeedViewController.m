@@ -11,7 +11,7 @@
 @interface HomeFeedViewController () <UITableViewDataSource, UITableViewDelegate>
 @property NSArray *posts;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property PFObject *post;
+
 
 
 @end
@@ -21,13 +21,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     PFUser *currentUser = [PFUser currentUser];
     NSLog(@"Current user: %@", currentUser.username);
+
+    
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)parseQuery
 {
+    PFUser *currentUser = [PFUser currentUser];
+    NSLog(@"Current user: %@", currentUser.username);
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Post"];
     [query orderByDescending:@"createdAt"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
@@ -36,33 +40,53 @@
         }
         else {
             self.posts = objects;
-            [super viewDidLoad];
             NSLog(@"Retrieved %lu posts", (unsigned long)[self.posts count]);
         }
     }];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 2;
+    return 4;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeCell"];
-    PFObject *post = [self.posts objectAtIndex:indexPath.row];
     
-//    PFFile *imageFile = [self.post objectForKey:@"file"];
-//    NSURL *imageFileUrl = [[NSURL alloc] initWithString:imageFile.url];
-//    NSData *imageData = [NSData dataWithContentsOfURL:imageFileUrl];
-//    
-//    UIImageView *cellImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
-//    cellImageView.image = [UIImage imageWithData:imageData];
-
-    NSString *caption = [self.post objectForKey:@"caption"];
-    UILabel *cellLabel = [UILabel new];
-    cellLabel.text = caption;
+    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+    [query orderByDescending:@"createdAt"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        else {
+            self.posts = objects;
+            NSLog(@"Retrieved %lu posts", (unsigned long)[self.posts count]);
+            PFObject *post = [self.posts objectAtIndex:indexPath.row];
+            
+            NSString *caption = [post objectForKey:@"caption"];
+            UILabel *cellLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
+            [cell addSubview:cellLabel];
+            cellLabel.text = caption.description;
+        }
+    }];
+    
     return cell;
+    
+    //    PFFile *imageFile = [self.post objectForKey:@"file"];
+    //    NSURL *imageFileUrl = [[NSURL alloc] initWithString:imageFile.url];
+    //    NSData *imageData = [NSData dataWithContentsOfURL:imageFileUrl];
+    //
+    //    UIImageView *cellImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 320)];
+    //    cellImageView.image = [UIImage imageWithData:imageData];
+    
+    
 }
 
 @end
