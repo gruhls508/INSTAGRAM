@@ -187,16 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				51E0FD6C19A2AE3300378FC4 /* Main.storyboard */,
-				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
-				51E0FD6A19A2AE3300378FC4 /* AppDelegate.m */,
 				79325E5219A52530001B1700 /* CommentsViewController.h */,
 				79325E5319A52530001B1700 /* CommentsViewController.m */,
 				511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */,
 				511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */,
 				7961604019A3DA750017DD8A /* HomeFeedViewController.h */,
 				7961604119A3DA750017DD8A /* HomeFeedViewController.m */,
-				51E0FDAA19A2FCE500378FC4 /* LoginViewController.h */,
-				51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */,
 				511FEFF319A3C8660041A6F4 /* PhotoUploadViewController.h */,
 				511FEFF419A3C8660041A6F4 /* PhotoUploadViewController.m */,
 				511FEFF919A3F3C40041A6F4 /* ProfileViewController.h */,
@@ -213,6 +209,10 @@
 		51E0FD6119A2AE3300378FC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
+				51E0FD6A19A2AE3300378FC4 /* AppDelegate.m */,
+				51E0FDAA19A2FCE500378FC4 /* LoginViewController.h */,
+				51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */,
 				51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */,
 				51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */,
 				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
