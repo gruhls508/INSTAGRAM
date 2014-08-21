@@ -392,12 +392,12 @@
                                     <action selector="onAddImage:" destination="Qo3-dF-wFZ" eventType="touchUpInside" id="1Ib-T1-Bfs"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-Sw-0Os">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1a-Sw-0Os">
                                 <rect key="frame" x="60" y="41" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzr-1B-fZV">
-                                <rect key="frame" x="122" y="305" width="89" height="30"/>
+                                <rect key="frame" x="114" y="290" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -407,7 +407,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-Wm-ur6">
-                                <rect key="frame" x="118" y="334" width="97" height="30"/>
+                                <rect key="frame" x="109" y="359" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -415,6 +415,16 @@
                                     <action selector="onCommentPressed:" destination="Qo3-dF-wFZ" eventType="editingDidEndOnExit" id="T5N-Lm-WhF"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfu-SR-TUG">
+                                <rect key="frame" x="88" y="321" width="145" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Use As Profile Pic">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onUseAsProfilePic:" destination="Qo3-dF-wFZ" eventType="touchUpInside" id="O9Q-q8-pRg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -440,7 +450,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuH-eJ-ejV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kuH-eJ-ejV">
                                 <rect key="frame" x="20" y="52" width="65" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -538,7 +548,7 @@
                         <outlet property="followingCountLabel" destination="vMP-7j-laB" id="0mj-K9-THh"/>
                         <outlet property="nameLabel" destination="cK4-m7-Otv" id="QHv-AM-jDk"/>
                         <outlet property="postCountLabel" destination="tpI-XN-tqH" id="YRO-XR-JxY"/>
-                        <outlet property="profileImage" destination="kuH-eJ-ejV" id="hLq-PC-9eh"/>
+                        <outlet property="profileImageView" destination="kuH-eJ-ejV" id="Ik9-sf-NPm"/>
                         <outlet property="userPhotosCollectionView" destination="gj4-dx-3BO" id="CDs-rx-1AR"/>
                         <outlet property="usernameLabel" destination="hb1-ou-BRg" id="OYd-HA-AYU"/>
                         <outlet property="websiteLabel" destination="Q91-9P-dD4" id="s1x-bD-ZHg"/>
@@ -601,7 +611,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxC-qj-aVC">
-                                <rect key="frame" x="65" y="159" width="89" height="30"/>
+                                <rect key="frame" x="69" y="339" width="89" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

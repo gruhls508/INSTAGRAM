@@ -10,7 +10,7 @@
 
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *postCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followerCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followingCountLabel;
@@ -28,10 +28,15 @@
     [super viewDidLoad];
     
     self.currentUser = [PFUser currentUser];
+    self.nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
+    self.websiteLabel.text = [[PFUser currentUser] objectForKey:@"website"];
     self.usernameLabel.text = self.currentUser.username;
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"UserInfo"];
-    
+    if ([[PFUser currentUser] objectForKey:@"profilePic"]) {
+        PFFile *pffile = [[PFUser currentUser] objectForKey:@"profilePic"];
+        [pffile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            self.profileImageView.image = [UIImage imageWithData:data];
+        }];
+    }
 }
 - (IBAction)onSearchButtonTapped:(id)sender
 {

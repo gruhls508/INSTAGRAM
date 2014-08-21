@@ -88,6 +88,41 @@ UIImagePickerControllerSourceTypePhotoLibrary
         }
     }];
 }
+- (IBAction)onUseAsProfilePic:(id)sender
+{
+    NSData *fileData = UIImagePNGRepresentation(self.displayAddedImageView.image);
+    NSString *fileName = @"image.png";
+    NSString *fileType = @"image";
+    
+    PFFile *file = [PFFile fileWithName:fileName data:fileData];
+    [file saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (error) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
+                                                                message:@"Please try again"
+                                                               delegate:self
+                                                      cancelButtonTitle:@"OK"
+                                                      otherButtonTitles: nil];
+            [alertView show];
+        }
+        else {
+            PFObject *profilePic = [PFObject objectWithClassName:@"Photo"];
+            [profilePic setObject:file forKey:@"file"];
+            [profilePic setObject:fileType forKey:@"fileType"];
+            
+            [profilePic saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                if (error) {
+                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
+                                                                        message:@"Please try again"
+                                                                       delegate:self
+                                                              cancelButtonTitle:@"OK"
+                                                              otherButtonTitles: nil];
+                    [alertView show];
+                }
+            }];
+        }
+    }];
+    
+}
 - (IBAction)onCommentPressed:(id)sender
 {
     
