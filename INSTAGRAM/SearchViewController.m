@@ -57,7 +57,7 @@
         else {
             self.images = objects;
             [self.collectionView reloadData];
-            NSLog(@"Retrieved %d images", [self.images count]);
+            NSLog(@"Retrieved %lu images", (unsigned long)[self.images count]);
         }
     }];
 }

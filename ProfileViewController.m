@@ -10,7 +10,7 @@
 
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *usernameLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *postCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followerCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followingCountLabel;
@@ -26,22 +26,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.currentUser = [PFUser currentUser];
-    
+    self.nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
+    self.websiteLabel.text = [[PFUser currentUser] objectForKey:@"website"];
     self.usernameLabel.text = self.currentUser.username;
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-        else {
-            NSUInteger numberOfPosts = objects.count;
-            self.postCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)numberOfPosts];
-            self.nameLabel.text = [self.currentUser objectForKey:@"name"];
-            self.websiteLabel.text = [self.currentUser objectForKey:@"website"];
-        }
-    }];
+    if ([[PFUser currentUser] objectForKey:@"profilePic"]) {
+        PFFile *pffile = [[PFUser currentUser] objectForKey:@"profilePic"];
+        [pffile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            self.profileImageView.image = [UIImage imageWithData:data];
+        }];
+    }
 }
 - (IBAction)onSearchButtonTapped:(id)sender
 {

@@ -27,24 +27,6 @@
     
 }
 
--(void)parseQuery
-{
-    PFUser *currentUser = [PFUser currentUser];
-    NSLog(@"Current user: %@", currentUser.username);
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    [query orderByDescending:@"createdAt"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-        else {
-            self.posts = objects;
-            NSLog(@"Retrieved %lu posts", (unsigned long)[self.posts count]);
-        }
-    }];
-}
-
 -(void)viewWillAppear:(BOOL)animated
 {
     
