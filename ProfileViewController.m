@@ -38,6 +38,17 @@
         }];
     }
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.usernameLabel.text = self.currentUser.username;
+    if ([[PFUser currentUser] objectForKey:@"profilePic"]) {
+        PFFile *pffile = [[PFUser currentUser] objectForKey:@"profilePic"];
+        [pffile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
+            self.profileImageView.image = [UIImage imageWithData:data];
+        }];
+    }
+}
 - (IBAction)onSearchButtonTapped:(id)sender
 {
     

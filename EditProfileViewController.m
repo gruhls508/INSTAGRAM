@@ -38,14 +38,10 @@
 {
     [[PFUser currentUser] setObject:self.nameField.text forKey:@"name"];
     [[PFUser currentUser] setObject:self.websiteField.text forKey:@"website"];
-    
-//    Photo *photo = [Photo objectWithClassName:@"Photo"];
-//    NSData *imageData = UIImagePNGRepresentation(self.imageView.image);
-//    PFFile *photoFile = [PFFile fileWithData:imageData];
-//    [photo setObject:[PFUser currentUser] forKey:@"user"];
-//    [[PFUser currentUser] setObject:photoFile forKey:@"profilePic"];
-//    [photo saveInBackground];
 
+    [self.currentUser addObject:self.nameField.text forKey:@"name"];
+    [self.currentUser addObject:self.websiteField.text forKey:@"website"];
+    
 
     [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error) {
@@ -54,15 +50,6 @@
         }
     }];
 
-    
-//    [userInfo setObject:name forKey:@"name"];
-//    [userInfo setObject:website forKey:@"website"];
-    
-//    PFRelation *relation1 = [self.currentUser relationForKey:@"name"];
-//    [relation1 addObject:userInfo];
-//    PFRelation *relation2 = [self.currentUser relationForKey:@"website"];
-//    [relation2 addObject:userInfo];
-//    [self.currentUser saveEventually];
 }
 
 -(BOOL)prefersStatusBarHidden
