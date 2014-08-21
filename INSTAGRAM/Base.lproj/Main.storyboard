@@ -24,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="P5I-b2-UTd" kind="modal" id="Msz-wl-Jnw"/>
+                                    <segue destination="6Gx-Sd-175" kind="modal" id="FCm-tt-pit"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-Se-4bi">
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="42" y="118"/>
+            <point key="canvasLocation" x="414" y="102"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="uaz-Y8-eyS">
@@ -131,7 +131,7 @@
                                 <connections>
                                     <action selector="onSignUp:" destination="iUC-fa-EQR" eventType="touchUpInside" id="g0k-Ue-Wq3"/>
                                     <action selector="signup:" destination="iUC-fa-EQR" eventType="touchUpInside" id="IAa-5M-Axn"/>
-                                    <segue destination="P5I-b2-UTd" kind="modal" id="qnW-n5-fc8"/>
+                                    <segue destination="6Gx-Sd-175" kind="modal" id="Nk9-V5-Zqe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -146,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gg-ks-nNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="663" y="546"/>
+            <point key="canvasLocation" x="812" y="102"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="YGq-o3-g6g">
@@ -186,7 +186,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H7V-sw-faH" kind="modal" id="dGF-av-O3J"/>
+                                    <action selector="onLoginPressed:" destination="6Gx-Sd-175" eventType="touchUpInside" id="uqE-nO-htK"/>
+                                    <segue destination="H7V-sw-faH" kind="modal" identifier="Login" id="bu1-6O-r7x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -367,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5i9-Xg-sXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2850" y="108"/>
+            <point key="canvasLocation" x="2330" y="108"/>
         </scene>
         <!--Photo Upload View Controller - Upload-->
         <scene sceneID="MTb-pr-Jng">
@@ -691,25 +692,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mvf-uH-368" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2324" y="2162"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mTc-UM-hwq">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P5I-b2-UTd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xFm-Rg-IhD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6Gx-Sd-175" kind="relationship" relationship="rootViewController" id="IKI-ea-nVK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IJo-1f-LGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="656" y="-375"/>
+            <point key="canvasLocation" x="2330" y="2140"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -718,6 +701,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="qnW-n5-fc8"/>
+        <segue reference="Nk9-V5-Zqe"/>
     </inferredMetricsTieBreakers>
 </document>
