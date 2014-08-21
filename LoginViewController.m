@@ -12,7 +12,6 @@
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 
 @end
 
@@ -42,12 +41,23 @@
             }
             else {
                 SearchViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"searchVC"];
-                [self.navigationController pushViewController:vc animated:YES];
             }
         }];
     }
-
 }
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([identifier isEqualToString:@"Login"]) {
+        if ([PFUser currentUser]) {
+            return YES;
+        } else if (![PFUser currentUser]){
+            return NO;
+        }
+    }
+    return NO;
+}
+
 - (IBAction)onUsernameInput:(id)sender {
 }
 - (IBAction)onPasswordInput:(id)sender {
