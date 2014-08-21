@@ -12,7 +12,6 @@
 @property PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *websiteField;
-@property PFRelation *infoRelation;
 
 @end
 
@@ -38,11 +37,7 @@
 {
     [[PFUser currentUser] setObject:self.nameField.text forKey:@"name"];
     [[PFUser currentUser] setObject:self.websiteField.text forKey:@"website"];
-
-    [self.currentUser addObject:self.nameField.text forKey:@"name"];
-    [self.currentUser addObject:self.websiteField.text forKey:@"website"];
     
-
     [[PFUser currentUser] saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (error) {
             UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"The information provided is not valid." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
@@ -55,6 +50,10 @@
 -(BOOL)prefersStatusBarHidden
 {
     return YES;
+}
+- (IBAction)nameField:(id)sender {
+}
+- (IBAction)websiteField:(id)sender {
 }
 
 @end

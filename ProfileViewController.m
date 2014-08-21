@@ -28,19 +28,14 @@
     [super viewDidLoad];
     
     self.currentUser = [PFUser currentUser];
-    self.nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
-    self.websiteLabel.text = [[PFUser currentUser] objectForKey:@"website"];
-    self.usernameLabel.text = self.currentUser.username;
-    if ([[PFUser currentUser] objectForKey:@"profilePic"]) {
-        PFFile *pffile = [[PFUser currentUser] objectForKey:@"profilePic"];
-        [pffile getDataInBackgroundWithBlock:^(NSData *data, NSError *error) {
-            self.profileImageView.image = [UIImage imageWithData:data];
-        }];
-    }
+
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    self.usernameLabel.text = self.currentUser.username;
+    self.nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
+    self.websiteLabel.text = [[PFUser currentUser] objectForKey:@"website"];
     self.usernameLabel.text = self.currentUser.username;
     if ([[PFUser currentUser] objectForKey:@"profilePic"]) {
         PFFile *pffile = [[PFUser currentUser] objectForKey:@"profilePic"];
