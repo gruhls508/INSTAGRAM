@@ -117,20 +117,12 @@
             [alertView show];
         }
         else {
-            PFObject *profilePic = [PFObject objectWithClassName:@"Photo"];
-            [profilePic setObject:file forKey:@"file"];
-            [profilePic setObject:fileType forKey:@"fileType"];
-            
-            [profilePic saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-                if (error) {
-                    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An error occurred"
-                                                                        message:@"Please try again"
-                                                                       delegate:self
-                                                              cancelButtonTitle:@"OK"
-                                                              otherButtonTitles: nil];
-                    [alertView show];
-                }
-            }];
+            PFObject *profilePic = [PFObject objectWithClassName:@"ProfilePic"];
+            NSData *imageData = UIImagePNGRepresentation(self.displayAddedImageView.image);
+            PFFile *photoFile = [PFFile fileWithData:imageData];
+            [profilePic setObject:[PFUser currentUser] forKey:@"user"];
+            [[PFUser currentUser] setObject:photoFile forKey:@"profilePic"];
+            [profilePic saveInBackground];
         }
     }];
     

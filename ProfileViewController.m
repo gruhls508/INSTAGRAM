@@ -28,6 +28,12 @@
     [super viewDidLoad];
     
     self.currentUser = [PFUser currentUser];
+
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.usernameLabel.text = self.currentUser.username;
     self.nameLabel.text = [[PFUser currentUser] objectForKey:@"name"];
     self.websiteLabel.text = [[PFUser currentUser] objectForKey:@"website"];
     self.usernameLabel.text = self.currentUser.username;
