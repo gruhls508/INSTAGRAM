@@ -12,7 +12,7 @@
 @property PFUser *currentUser;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *websiteField;
-
+@property PFRelation *infoRelation;
 
 @end
 
@@ -39,16 +39,16 @@
     NSString *name = self.nameField.text;
     NSString *website = self.websiteField.text;
 
-    PFObject *userInfo = [PFObject objectWithClassName:@"User"];
-    [userInfo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (error) {
-            NSLog(@"%@", [error userInfo]);
-        } else {
-            [userInfo setObject:name forKey:@"name"];
-            [userInfo setObject:website forKey:@"website"];
-
-        }
-    }];
+    PFObject *userInfo = [PFObject objectWithClassName:@"UserInfo"];
+    
+    [userInfo setObject:name forKey:@"name"];
+    [userInfo setObject:website forKey:@"website"];
+    
+    PFRelation *relation1 = [self.currentUser relationForKey:@"name"];
+    [relation1 addObject:userInfo];
+    PFRelation *relation2 = [self.currentUser relationForKey:@"website"];
+    [relation2 addObject:userInfo];
+    [self.currentUser saveEventually];
 }
 
 -(BOOL)prefersStatusBarHidden

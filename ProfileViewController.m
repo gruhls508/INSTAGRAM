@@ -26,22 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.currentUser = [PFUser currentUser];
     
+    self.currentUser = [PFUser currentUser];
     self.usernameLabel.text = self.currentUser.username;
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Post"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (error) {
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-        else {
-            NSUInteger numberOfPosts = objects.count;
-            self.postCountLabel.text = [NSString stringWithFormat:@"%lu", (unsigned long)numberOfPosts];
-            self.nameLabel.text = [self.currentUser objectForKey:@"name"];
-            self.websiteLabel.text = [self.currentUser objectForKey:@"website"];
-        }
-    }];
+    PFQuery *query = [PFQuery queryWithClassName:@"UserInfo"];
+    
 }
 - (IBAction)onSearchButtonTapped:(id)sender
 {
