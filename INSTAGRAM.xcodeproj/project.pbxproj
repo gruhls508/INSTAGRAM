@@ -11,6 +11,7 @@
 		511FEFF519A3C8660041A6F4 /* PhotoUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFF419A3C8660041A6F4 /* PhotoUploadViewController.m */; };
 		511FEFFB19A3F3C40041A6F4 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFFA19A3F3C40041A6F4 /* ProfileViewController.m */; };
 		511FEFFE19A4057F0041A6F4 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */; };
+		51597A1419A799220007D6D1 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 51597A1319A799220007D6D1 /* Person.m */; };
 		51E0FD5B19A2AE3300378FC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5A19A2AE3300378FC4 /* Foundation.framework */; };
 		51E0FD5D19A2AE3300378FC4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5C19A2AE3300378FC4 /* CoreGraphics.framework */; };
 		51E0FD5F19A2AE3300378FC4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E0FD5E19A2AE3300378FC4 /* UIKit.framework */; };
@@ -63,6 +64,8 @@
 		511FEFFA19A3F3C40041A6F4 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
 		511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditProfileViewController.h; path = ../EditProfileViewController.h; sourceTree = "<group>"; };
 		511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditProfileViewController.m; path = ../EditProfileViewController.m; sourceTree = "<group>"; };
+		51597A1219A799220007D6D1 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Person.h; path = ../Person.h; sourceTree = "<group>"; };
+		51597A1319A799220007D6D1 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Person.m; path = ../Person.m; sourceTree = "<group>"; };
 		51E0FD5719A2AE3300378FC4 /* INSTAGRAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INSTAGRAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E0FD5A19A2AE3300378FC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		51E0FD5C19A2AE3300378FC4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,14 +193,8 @@
 		51E0FD6019A2AE3300378FC4 /* INSTAGRAM */ = {
 			isa = PBXGroup;
 			children = (
-				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
-				51E0FD6A19A2AE3300378FC4 /* AppDelegate.m */,
-				79325E5219A52530001B1700 /* CommentsViewController.h */,
-				79325E5319A52530001B1700 /* CommentsViewController.m */,
 				7961604019A3DA750017DD8A /* HomeFeedViewController.h */,
 				7961604119A3DA750017DD8A /* HomeFeedViewController.m */,
-				79B6BEC819A2D66C006CAEF8 /* ImageCell.h */,
-				79B6BEC919A2D66C006CAEF8 /* ImageCell.m */,
 				51E0FDAA19A2FCE500378FC4 /* LoginViewController.h */,
 				51E0FDAB19A2FCE500378FC4 /* LoginViewController.m */,
 				51E0FD6C19A2AE3300378FC4 /* Main.storyboard */,
@@ -206,13 +203,9 @@
 				511FEFF919A3F3C40041A6F4 /* ProfileViewController.h */,
 				511FEFFA19A3F3C40041A6F4 /* ProfileViewController.m */,
 				51E0FD6F19A2AE3300378FC4 /* RootViewController.h */,
+				51E0FD7019A2AE3300378FC4 /* RootViewController.m */,
 				511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */,
 				511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */,
-				51E0FD7019A2AE3300378FC4 /* RootViewController.m */,
-				79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */,
-				79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */,
-				51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */,
-				51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */,
 				51E0FD6119A2AE3300378FC4 /* Supporting Files */,
 			);
 			path = INSTAGRAM;
@@ -221,6 +214,18 @@
 		51E0FD6119A2AE3300378FC4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				51E0FD6919A2AE3300378FC4 /* AppDelegate.h */,
+				51E0FD6A19A2AE3300378FC4 /* AppDelegate.m */,
+				79325E5219A52530001B1700 /* CommentsViewController.h */,
+				79325E5319A52530001B1700 /* CommentsViewController.m */,
+				79B6BEC819A2D66C006CAEF8 /* ImageCell.h */,
+				79B6BEC919A2D66C006CAEF8 /* ImageCell.m */,
+				79B6BECB19A2D67B006CAEF8 /* SearchViewController.h */,
+				79B6BECC19A2D67B006CAEF8 /* SearchViewController.m */,
+				51E0FDA719A2FBB800378FC4 /* SignUpViewController.h */,
+				51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */,
+				51597A1219A799220007D6D1 /* Person.h */,
+				51597A1319A799220007D6D1 /* Person.m */,
 				511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */,
 				511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */,
 				51E0FD7219A2AE3300378FC4 /* Images.xcassets */,
@@ -358,6 +363,7 @@
 				79B6BECD19A2D67B006CAEF8 /* SearchViewController.m in Sources */,
 				511FEFF519A3C8660041A6F4 /* PhotoUploadViewController.m in Sources */,
 				79325E5419A52530001B1700 /* CommentsViewController.m in Sources */,
+				51597A1419A799220007D6D1 /* Person.m in Sources */,
 				51E0FDAC19A2FCE500378FC4 /* LoginViewController.m in Sources */,
 				51E0FD6B19A2AE3300378FC4 /* AppDelegate.m in Sources */,
 				51E0FD6719A2AE3300378FC4 /* main.m in Sources */,
