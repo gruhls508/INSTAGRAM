@@ -34,6 +34,8 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    //  Temporary 'magic number' as placeholder while I get this set up correctly.
+
     return 4;
 }
 
