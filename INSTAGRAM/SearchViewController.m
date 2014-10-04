@@ -3,7 +3,7 @@
 //  INSTAGRAM
 //
 //  Created by Patrick Hogan on 8/18/14.
-//  Copyright (c) 2014 MM. All rights reserved.
+//  Copyright (c) 2014 Intradine. All rights reserved.
 //
 
 #import "SearchViewController.h"
