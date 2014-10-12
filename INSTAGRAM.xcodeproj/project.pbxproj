@@ -226,8 +226,6 @@
 				51E0FDA819A2FBB800378FC4 /* SignUpViewController.m */,
 				51597A1219A799220007D6D1 /* Person.h */,
 				51597A1319A799220007D6D1 /* Person.m */,
-				511FEFFC19A4057F0041A6F4 /* EditProfileViewController.h */,
-				511FEFFD19A4057F0041A6F4 /* EditProfileViewController.m */,
 				51E0FD7219A2AE3300378FC4 /* Images.xcassets */,
 				51E0FD9519A2F2E200378FC4 /* Parse.framework */,
 				51E0FD6219A2AE3300378FC4 /* INSTAGRAM-Info.plist */,
